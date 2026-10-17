@@ -10,7 +10,7 @@
 <body>
   <main class="game-shell">
     <header class="topbar">
-      <div class="brand"><span class="brand-mark">✦</span><span>ASTRAL<span class="accent">//</span>SHOOTER</span><small>SECTOR 07</small></div>
+      <div class="brand"><span class="brand-mark">✦</span><span>ASTRAL<span class="accent">//</span>SHOOTER</span><small id="sectorLabel">SECTOR 01</small></div>
       <div class="top-controls"><button id="soundToggle" class="icon-btn" aria-label="Activar o desactivar sonido">◉</button><button id="pauseBtn" class="icon-btn" aria-label="Pausar">Ⅱ</button></div>
     </header>
 
@@ -34,7 +34,7 @@
           <div class="help"><span><kbd>WASD</kbd> / <kbd>←↑↓→</kbd> MOVER</span><span><kbd>SPACE</kbd> DISPARAR</span><span><kbd>P</kbd> PAUSA</span></div>
         </div>
         <div id="pauseScreen" class="overlay hidden"><div class="title-kicker">// SISTEMA EN ESPERA</div><h2>PAUSA</h2><button type="button" id="resumeBtn" class="primary-btn"><span>CONTINUAR</span><b>→</b></button><p class="subtitle">Pulsa P o el botón superior para volver a la acción.</p></div>
-        <div id="gameOverScreen" class="overlay hidden"><div class="title-kicker">// SEÑAL PERDIDA</div><h2>MISIÓN TERMINADA</h2><p class="final-score">PUNTUACIÓN <strong id="finalScore">00000000</strong></p><button type="button" id="restartBtn" class="primary-btn"><span>REINTENTAR</span><b>↻</b></button></div>
+        <div id="gameOverScreen" class="overlay hidden"><div id="endKicker" class="title-kicker">// SEÑAL PERDIDA</div><h2 id="endTitle">MISIÓN TERMINADA</h2><p class="final-score">PUNTUACIÓN <strong id="finalScore">00000000</strong></p><button type="button" id="restartBtn" class="primary-btn"><span id="restartLabel">REINTENTAR</span><b>↻</b></button></div>
         <div class="bottom-hud"><div><span>AMMO</span><strong id="ammo">120</strong></div><div><span>ENERGY</span><strong id="energy">85%</strong></div><div><span>OVERDRIVE</span><b class="overdrive"><i></i><i></i><i></i><i></i><i></i><i></i><i class="empty"></i><i class="empty"></i></b></div></div>
         <div class="mobile-controls" aria-label="Controles táctiles"><div id="joystick" class="joystick"><i></i></div><button id="mobileFire" class="fire-btn">FIRE</button></div>
       </div>
