@@ -33,4 +33,4 @@ Export-Crop $fx 'bolt.png' 205 0 105 205
 Export-Crop $fx 'enemy-bolt.png' 0 205 120 125
 Export-Crop $fx 'explosion-orange.png' 0 590 285 270
 Export-Crop $fx 'explosion-purple.png' 760 590 300 270
-Export-Crop $fx 'power-plus.png' 30 835 115 115
+Export-Crop $fx 'power-plus.png' 42 832 140 140
