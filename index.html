@@ -15,9 +15,7 @@
     </header>
 
     <section class="playfield-wrap">
-      <div id="gameFrame" class="game-frame">
-        <canvas id="gameCanvas" aria-label="Juego de naves Astral Shooter"></canvas>
-        <div class="scanlines"></div>
+      <div class="game-panel">
         <div id="hud" class="hud" aria-live="polite">
           <div class="hud-card score-card"><span class="label">SCORE</span><strong id="score">00000000</strong><span id="scoreDelta" class="delta"></span></div>
           <div class="hud-card wave-card"><span class="label">WAVE</span><strong id="wave">01</strong><span id="waveLabel">DEEP SPACE</span></div>
@@ -25,6 +23,9 @@
           <div class="hud-card combo-card"><span class="label">COMBO</span><strong id="combo">x1.0</strong><span id="comboLabel">BUILD CHAIN</span></div>
           <div class="hud-card weapon-card"><span class="label">WEAPON <em id="weaponLevel">LVL 1</em></span><div id="weaponBars" class="weapon-bars"><i></i><i class="empty"></i><i class="empty"></i><i class="empty"></i><i class="empty"></i></div><span id="weaponName">DUAL PLASMA</span></div>
         </div>
+      <div id="gameFrame" class="game-frame">
+        <canvas id="gameCanvas" aria-label="Juego de naves Astral Shooter"></canvas>
+        <div class="scanlines"></div>
         <div id="centerStatus" class="center-status hidden"></div>
         <div id="startScreen" class="overlay">
           <div class="title-kicker">// INCOMING TRANSMISSION</div>
@@ -36,6 +37,7 @@
         <div id="pauseScreen" class="overlay hidden"><div class="title-kicker">// SISTEMA EN ESPERA</div><h2>PAUSA</h2><button type="button" id="resumeBtn" class="primary-btn"><span>CONTINUAR</span><b>→</b></button><p class="subtitle">Pulsa P o el botón superior para volver a la acción.</p></div>
         <div id="gameOverScreen" class="overlay hidden"><div id="endKicker" class="title-kicker">// SEÑAL PERDIDA</div><h2 id="endTitle">MISIÓN TERMINADA</h2><p class="final-score">PUNTUACIÓN <strong id="finalScore">00000000</strong></p><button type="button" id="restartBtn" class="primary-btn"><span id="restartLabel">REINTENTAR</span><b>↻</b></button></div>
         <div class="mobile-controls" aria-label="Controles táctiles"><div id="joystick" class="joystick"><i></i></div><button id="mobileFire" class="fire-btn">FIRE</button></div>
+      </div>
       </div>
     </section>
 

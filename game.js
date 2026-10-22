@@ -42,5 +42,6 @@
   addEventListener('resize',resize);addEventListener('keydown',e=>{keys.add(e.key);if([' ','ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key))e.preventDefault();if(e.key.toLowerCase()==='p')togglePause()});addEventListener('keyup',e=>keys.delete(e.key));
   $('#startBtn').addEventListener('click',start);$('#restartBtn').addEventListener('click',start);$('#resumeBtn').addEventListener('click',togglePause);$('#pauseBtn').addEventListener('click',togglePause);$('#soundToggle').addEventListener('click',()=>{sound=!sound;$('#soundToggle').textContent=sound?'◉':'⊘'});$('#mobileFire').addEventListener('pointerdown',fire);
   const joy=$('#joystick');joy.onpointerdown=e=>{joy.setPointerCapture(e.pointerId);const move=ev=>{const r=joy.getBoundingClientRect(),x=ev.clientX-r.left-r.width/2,y=ev.clientY-r.top-r.height/2;keys.delete('ArrowLeft');keys.delete('ArrowRight');keys.delete('ArrowUp');keys.delete('ArrowDown');if(x>10)keys.add('ArrowRight');if(x<-10)keys.add('ArrowLeft');if(y>10)keys.add('ArrowDown');if(y<-10)keys.add('ArrowUp')};joy.onpointermove=move;joy.onpointerup=()=>{['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].forEach(k=>keys.delete(k));joy.onpointermove=null}};
+  new ResizeObserver(resize).observe(canvas);
   resize();reset();
 })();
